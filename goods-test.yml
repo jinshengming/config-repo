@@ -1,0 +1,21 @@
+server:
+  port: 9070
+spring:
+  application:
+    name: service-goods
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://47.110.56.139:3306/db_fl_goods?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+      username: root
+      password: Ao1tSvy
+eureka:
+  instance:
+    ip-address: 192.168.30.32
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://test.com:8761/eureka
+
